@@ -1,5 +1,5 @@
 import os
-
+from google.genai import types
 
 def get_files_info(working_directory, directory=None):
     abs_working_dir = os.path.abspath(working_directory)
@@ -23,3 +23,4 @@ def get_files_info(working_directory, directory=None):
         return "\n".join(files_info)
     except Exception as e:
         return f"Error listing files: {e}"
+    
